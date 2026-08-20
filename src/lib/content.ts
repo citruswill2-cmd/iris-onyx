@@ -15,6 +15,7 @@ export const ARTIST = {
   vibe: "the softest knife",
   manifesto: "Pop with teeth. Windows down. Lights off.",
   email: "iris0nyx@gmail.com",
+  site: "https://iris0nyx.com",
   instagram: "https://www.instagram.com/official_iris0nyx/",
   tiktok: "https://www.tiktok.com/@iris0nyx",
   shop: "https://iris-onyx-shop.fourthwall.com",
