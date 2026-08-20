@@ -17,6 +17,7 @@ export const ARTIST = {
   email: "iris0nyx@gmail.com",
   instagram: "https://www.instagram.com/official_iris0nyx/",
   tiktok: "https://www.tiktok.com/@iris0nyx",
+  shop: "https://iris-onyx-shop.fourthwall.com",
   spotifyArtist: "https://open.spotify.com/artist/5p5jkzzew7nU5ReP3BKvE7",
   appleArtist: "https://music.apple.com/us/artist/iris-0nyx/1718747489",
 } as const;
@@ -240,6 +241,7 @@ export const nextShow = shows[0];
 export type ArtPiece = {
   id: string;
   title: string;
+  line: string;
   price: string;
   image: string;
   imageWebp: string;
@@ -247,33 +249,178 @@ export type ArtPiece = {
 };
 
 /* ========== ART ==========
+ * Handmade hoop embroidery from IRISNEEDLENBONE.
  * 100% of proceeds support donations to Corvus.
- * price: a dollar amount or the word "Inquire"
  */
 export const artPieces: ArtPiece[] = [
   {
-    id: "mossblood-heart",
-    title: "Mossblood Heart",
+    id: "dark-grunge",
+    title: "Dark Grunge",
+    line: "Moth, flower, skull",
     price: "Inquire",
-    image: "/images/art-heart-640.jpg",
-    imageWebp: "/images/art-heart-640.webp",
-    alt: "Embroidered anatomical heart in blood-red thread on black linen",
+    image: "/images/art-grunge-640.jpg",
+    imageWebp: "/images/art-grunge-640.webp",
+    alt: "Handmade hoop embroidery of a death's-head moth, skull, and night flowers on black linen",
   },
   {
-    id: "corvus",
-    title: "Corvus",
-    price: "Inquire",
-    image: "/images/art-crow-640.jpg",
-    imageWebp: "/images/art-crow-640.webp",
-    alt: "Embroidered crow in bone-white thread on black linen",
+    id: "hilarious",
+    title: "Hilarious",
+    line: "Alternative wall hanging",
+    price: "$30",
+    image: "/images/art-hilarious-640.jpg",
+    imageWebp: "/images/art-hilarious-640.webp",
+    alt: "Handmade hoop embroidery of a snarling anatomical heart on black linen",
   },
   {
-    id: "night-smoke",
-    title: "Night Smoke",
+    id: "bugs",
+    title: "Bugs",
+    line: "Beetles, moths, cicada",
     price: "Inquire",
-    image: "/images/art-cigarette-640.jpg",
-    imageWebp: "/images/art-cigarette-640.webp",
-    alt: "Embroidered cigarette and night flower in bone and red thread",
+    image: "/images/art-bugs-640.jpg",
+    imageWebp: "/images/art-bugs-640.webp",
+    alt: "Handmade hoop embroidery of beetles, moths, and a cicada on black linen",
+  },
+  {
+    id: "circus",
+    title: "Circus",
+    line: "Alternative wall hanging",
+    price: "Inquire",
+    image: "/images/art-circus-640.jpg",
+    imageWebp: "/images/art-circus-640.webp",
+    alt: "Handmade hoop embroidery of a strange circus tent and moon on black linen",
+  },
+  {
+    id: "gothic-cow",
+    title: "Gothic Cow",
+    line: "Alternative farm",
+    price: "Inquire",
+    image: "/images/art-cow-640.jpg",
+    imageWebp: "/images/art-cow-640.webp",
+    alt: "Handmade hoop embroidery of a longhorn cow skull and dark flowers on black linen",
+  },
+  {
+    id: "cat",
+    title: "Cat",
+    line: "Alternative wall hanging",
+    price: "Inquire",
+    image: "/images/art-cat-640.jpg",
+    imageWebp: "/images/art-cat-640.webp",
+    alt: "Handmade hoop embroidery of a black cat with a knife on black linen",
+  },
+  {
+    id: "smoking-rat",
+    title: "Smoking Rat",
+    line: "Alternative farm",
+    price: "Inquire",
+    image: "/images/art-rat-640.jpg",
+    imageWebp: "/images/art-rat-640.webp",
+    alt: "Handmade hoop embroidery of a rat smoking a cigarette on black linen",
+  },
+  {
+    id: "abstract",
+    title: "Abstract Collage",
+    line: "Layered hoop",
+    price: "$30",
+    image: "/images/art-abstract-640.jpg",
+    imageWebp: "/images/art-abstract-640.webp",
+    alt: "Handmade abstract embroidery collage on black fabric in a wooden hoop",
+  },
+];
+
+export type MerchItem = {
+  id: string;
+  title: string;
+  price: string;
+  href: string;
+  image: string;
+  imageWebp: string;
+  alt: string;
+};
+
+/* ========== MERCH ==========
+ * Live shop: iris-onyx-shop.fourthwall.com
+ */
+export const merchItems: MerchItem[] = [
+  {
+    id: "hoodie",
+    title: "Hoodie",
+    price: "$55",
+    href: "https://iris-onyx-shop.fourthwall.com/products/iris-onyx-hoddie",
+    image: "/images/merch-hoodie-640.jpg",
+    imageWebp: "/images/merch-hoodie-640.webp",
+    alt: "Black IRIS ONYX hoodie",
+  },
+  {
+    id: "joggers",
+    title: "Joggers",
+    price: "$40",
+    href: "https://iris-onyx-shop.fourthwall.com/products/iris-0nyx-joggers",
+    image: "/images/merch-joggers-640.jpg",
+    imageWebp: "/images/merch-joggers-640.webp",
+    alt: "Black IRIS 0NYX joggers",
+  },
+  {
+    id: "graphic",
+    title: "Graphic Tee",
+    price: "$30",
+    href: "https://iris-onyx-shop.fourthwall.com/products/iris-onyx-graphic-design",
+    image: "/images/merch-graphic-640.jpg",
+    imageWebp: "/images/merch-graphic-640.webp",
+    alt: "Black IRIS ONYX graphic t-shirt",
+  },
+  {
+    id: "rose",
+    title: "Pink Rose Tee",
+    price: "$30",
+    href: "https://iris-onyx-shop.fourthwall.com/products/pink-rose-iris-onyx",
+    image: "/images/merch-rose-640.jpg",
+    imageWebp: "/images/merch-rose-640.webp",
+    alt: "Black t-shirt with pink rose IRIS ONYX print",
+  },
+  {
+    id: "veil",
+    title: "Veil Shirt",
+    price: "$25",
+    href: "https://iris-onyx-shop.fourthwall.com/products/veil-iris-shirt",
+    image: "/images/merch-veil-640.jpg",
+    imageWebp: "/images/merch-veil-640.webp",
+    alt: "Black IRIS ONYX veil shirt",
+  },
+  {
+    id: "est",
+    title: "EST. Tee",
+    price: "$25",
+    href: "https://iris-onyx-shop.fourthwall.com/products/est-iris-onyx",
+    image: "/images/merch-est-640.jpg",
+    imageWebp: "/images/merch-est-640.webp",
+    alt: "Black EST. IRIS ONYX t-shirt",
+  },
+  {
+    id: "beanie",
+    title: "Beanie",
+    price: "$25",
+    href: "https://iris-onyx-shop.fourthwall.com/products/iris-0nys-benie",
+    image: "/images/merch-beanie-640.jpg",
+    imageWebp: "/images/merch-beanie-640.webp",
+    alt: "Black IRIS 0NYX beanie",
+  },
+  {
+    id: "hat",
+    title: "Hat",
+    price: "$25",
+    href: "https://iris-onyx-shop.fourthwall.com/products/iris-onyx-hat-1",
+    image: "/images/merch-hat-640.jpg",
+    imageWebp: "/images/merch-hat-640.webp",
+    alt: "Black IRIS ONYX baseball hat",
+  },
+  {
+    id: "mug",
+    title: "EST. Mug",
+    price: "$21",
+    href: "https://iris-onyx-shop.fourthwall.com/products/est-iris-mug",
+    image: "/images/merch-mug-640.jpg",
+    imageWebp: "/images/merch-mug-640.webp",
+    alt: "Black EST. IRIS ONYX mug",
   },
 ];
 

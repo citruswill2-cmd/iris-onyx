@@ -69,6 +69,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
             <a href={ARTIST.tiktok} target="_blank" rel="noreferrer" className="text-muted hover:text-fg">
               TikTok
             </a>
+            <a href={ARTIST.shop} target="_blank" rel="noreferrer" className="text-muted hover:text-fg">
+              Merch
+            </a>
           </div>
         </div>
       </footer>
