@@ -17,7 +17,6 @@ export const ARTIST = {
   email: "iris0nyx@gmail.com",
   instagram: "https://www.instagram.com/official_iris0nyx/",
   tiktok: "https://www.tiktok.com/@iris0nyx",
-  etsy: "https://www.etsy.com/shop/IRISNEEDLENBONE",
   spotifyArtist: "https://open.spotify.com/artist/5p5jkzzew7nU5ReP3BKvE7",
   appleArtist: "https://music.apple.com/us/artist/iris-0nyx/1718747489",
 } as const;

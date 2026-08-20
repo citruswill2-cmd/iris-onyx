@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ARTIST, CORVUS_NOTE, artPieces } from "@/lib/content";
+import { CORVUS_NOTE, artPieces } from "@/lib/content";
 import { inquireMailto } from "@/lib/utils";
 
 export const Route = createFileRoute("/art")({ component: ArtPage });
@@ -10,14 +10,6 @@ function ArtPage() {
       <p className="kicker">Art</p>
       <h1 className="display display-section mt-2">Needle & bone</h1>
       <p className="vibe mt-4 max-w-lg text-2xl">{CORVUS_NOTE}</p>
-      <a
-        href={ARTIST.etsy}
-        target="_blank"
-        rel="noreferrer"
-        className="mt-4 inline-block font-body text-sm font-semibold tracking-[0.16em] uppercase text-muted hover:text-fg"
-      >
-        Etsy shop
-      </a>
 
       {/* ========== ART PIECES — edit in src/lib/content.ts ========== */}
       <ul className="mt-12 space-y-16">
