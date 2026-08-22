@@ -3,8 +3,18 @@ import { ARTIST, featuredTracks, nextShow } from "@/lib/content";
 import { Photo, irisHero, irisStreet } from "@/components/photo";
 import { TrackList } from "@/components/track-list";
 import { ShowBlock } from "@/components/show-block";
+import { pageHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/")({ component: Home });
+export const Route = createFileRoute("/")({
+  component: Home,
+  head: () =>
+    pageHead({
+      title: "Iris Onyx | Goth pop from Utah — listen now",
+      description:
+        "Stream Cigarette, Bleeding Heart, and My Drug. Iris Onyx (iris 0nyx) is a Utah independent goth-pop artist and producer. Free backyard show Aug 22 in West Jordan.",
+      path: "/",
+    }),
+});
 
 function Home() {
   const cigarette = featuredTracks[0];
@@ -75,6 +85,7 @@ function Home() {
       <section className="px-5 py-16 sm:px-8 lg:flex lg:items-end lg:justify-between lg:px-16 lg:py-24">
         <p className="vibe max-w-xl text-3xl text-fg sm:text-4xl">{ARTIST.manifesto}</p>
         <p className="mt-6 max-w-sm font-body text-lg tracking-wide text-muted lg:mt-0">
+          Iris Onyx — also styled iris 0nyx — is a Utah independent goth-pop artist and producer.
           Goth chick making pop. Art proceeds go to Corvus.
         </p>
       </section>

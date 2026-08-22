@@ -1,7 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ARTIST } from "@/lib/content";
+import { pageHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/contact")({ component: ContactPage });
+export const Route = createFileRoute("/contact")({
+  component: ContactPage,
+  head: () =>
+    pageHead({
+      title: "Booking | Iris Onyx",
+      description:
+        "Book Iris Onyx for shows, features, and sessions. Utah independent pop artist. iris0nyx@gmail.com",
+      path: "/contact",
+    }),
+});
+
 
 function ContactPage() {
   return (

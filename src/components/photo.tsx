@@ -55,7 +55,7 @@ export const irisHero: Omit<PhotoProps, "className" | "eager"> = {
     },
   ],
   src: "/images/iris-hero-800.jpg",
-  alt: "Iris Onyx",
+  alt: "Iris Onyx, Utah independent pop artist, in red stage light",
   width: 800,
   height: 800,
   sizes: "(min-width: 1024px) 42vw, 100vw",

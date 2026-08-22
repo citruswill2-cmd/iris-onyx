@@ -1,7 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GROK_PROVIDERS, authEnabled, signIn } from "@/lib/auth/client";
+import { pageHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/login")({ component: Login });
+export const Route = createFileRoute("/login")({
+  component: Login,
+  head: () =>
+    pageHead({
+      title: "Sign in | Iris Onyx",
+      description: "Account sign-in.",
+      path: "/login",
+      noindex: true,
+    }),
+});
+
 
 function Login() {
   return (

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /api/
+Disallow: /auth/
+
+Sitemap: https://iris0nyx.com/sitemap.xml

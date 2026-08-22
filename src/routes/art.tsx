@@ -1,8 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ARTIST, CORVUS_NOTE, artPieces, merchItems } from "@/lib/content";
 import { inquireMailto } from "@/lib/utils";
+import { pageHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/art")({ component: ArtPage });
+export const Route = createFileRoute("/art")({
+  component: ArtPage,
+  head: () =>
+    pageHead({
+      title: "Art & merch | Iris Onyx embroidery",
+      description:
+        "Handmade hoop embroidery by Iris Onyx. Inquire to buy. Official IRIS 0NYX merch — hoodies, tees, hats. Art proceeds support Corvus.",
+      path: "/art",
+    }),
+});
+
 
 function ArtPage() {
   return (

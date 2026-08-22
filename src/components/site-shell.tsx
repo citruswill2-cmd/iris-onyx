@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { ARTIST } from "@/lib/content";
 import { cn } from "@/lib/utils";
+import { JsonLd } from "@/components/json-ld";
 import { IrisMotion } from "@/components/iris-motion";
 
 const NAV = [
@@ -17,6 +18,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-dvh bg-bg text-fg">
+      <JsonLd />
       {isHome ? <IrisMotion /> : null}
       <a
         href="#listen"
@@ -55,6 +57,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <div>
             <p className="display text-4xl">IRIS ONYX</p>
             <p className="vibe mt-2 text-xl text-muted">{ARTIST.vibe}</p>
+            <p className="mt-2 font-body text-sm tracking-[0.14em] text-muted uppercase">
+              Utah independent pop
+            </p>
           </div>
           <div className="flex flex-col gap-2 font-body text-sm tracking-[0.16em] uppercase">
             <a href={`mailto:${ARTIST.email}`} className="hover:text-blood">
@@ -62,6 +67,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
             </a>
             <a href={ARTIST.spotifyArtist} target="_blank" rel="noreferrer" className="text-muted hover:text-fg">
               Spotify
+            </a>
+            <a href={ARTIST.appleArtist} target="_blank" rel="noreferrer" className="text-muted hover:text-fg">
+              Apple Music
             </a>
             <a href={ARTIST.instagram} target="_blank" rel="noreferrer" className="text-muted hover:text-fg">
               Instagram
