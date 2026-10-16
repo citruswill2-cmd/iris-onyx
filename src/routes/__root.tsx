@@ -9,6 +9,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { SiteShell } from "@/components/site-shell";
 import { ARTIST } from "@/lib/content";
 import appCss from "../styles.css?url";
+import { Analytics } from "@vercel/analytics/react";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -76,6 +77,7 @@ function RootDocument() {
             <Outlet />
           </SiteShell>
         </AuthProvider>
+        <Analytics />
         <Scripts />
       </body>
     </html>
