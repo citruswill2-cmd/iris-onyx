@@ -1,4 +1,4 @@
-import {Analytics } from '@vercel/analytics/react';
+import {
   createRootRoute,
   HeadContent,
   Outlet,
