@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
     pageHead({
       title: "Iris Onyx | Goth pop from Utah — listen now",
       description:
-        "Stream Cigarette, Bleeding Heart, and My Drug. Iris Onyx (iris 0nyx) is a Utah independent goth-pop artist and producer. Free backyard show Aug 22 in West Jordan.",
+        "Stream Cigarette, Bleeding Heart, and My Drug. Iris Onyx (iris 0nyx) is a Utah independent goth-pop artist and producer.",
       path: "/",
     }),
 });
@@ -48,9 +48,15 @@ function Home() {
             >
               Play {cigarette.title}
             </a>
-            <Link to="/shows" className="ghost-pill">
-              {nextShow.dateShort} · {nextShow.city.split(",")[0]}
-            </Link>
+            {nextShow ? (
+              <Link to="/shows" className="ghost-pill">
+                {nextShow.dateShort} · {nextShow.city.split(",")[0]}
+              </Link>
+            ) : (
+              <Link to="/shows" className="ghost-pill">
+                Shows
+              </Link>
+            )}
           </div>
         </div>
       </section>
