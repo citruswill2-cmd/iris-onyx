@@ -173,71 +173,9 @@ export type Show = {
  * The first item is the next show (home + shows page).
  * Duplicate the object below to add dates. Keep id unique.
  */
-export const shows: Show[] = [
-  {
-    id: "aug-22-west-jordan",
-    dateLockup: "AUGUST 22ND",
-    dateShort: "AUG 22",
-    weekday: "Saturday",
-    title: "Free Backyard Show",
-    theme: "Mossblood Themed: Southern Goth",
-    time: "6 PM",
-    ages: "All Ages",
-    address: "6825 S. Dixie Drive",
-    city: "West Jordan, UT",
-    maps: "https://maps.google.com/?q=6825+S.+Dixie+Drive,+West+Jordan,+UT",
-    benefit: "Benefit show — help raise funds for a friend with funeral costs.",
-    note: "Limited prizes for those who help raise.",
-    presented: "Glass Snare Productions",
-    host: "Luh Benzo",
-    dj: "Tumnus",
-    lineup: ["Grody DaGrimy1", "Why Carson", "Javion King"],
-  },
-  /* ---- SHOW SLOT 2
-  {
-    id: "show-2",
-    dateLockup: "MONTH DAY",
-    dateShort: "MON 00",
-    weekday: "Weekday",
-    title: "Show title",
-    theme: "Theme",
-    time: "8 PM",
-    ages: "All Ages",
-    address: "Venue address",
-    city: "City, ST",
-    maps: "https://maps.google.com/?q=",
-    benefit: "",
-    note: "",
-    presented: "",
-    host: "",
-    dj: "",
-    lineup: [],
-  },
-  ---- */
-  /* ---- SHOW SLOT 3
-  {
-    id: "show-3",
-    dateLockup: "MONTH DAY",
-    dateShort: "MON 00",
-    weekday: "Weekday",
-    title: "Show title",
-    theme: "Theme",
-    time: "8 PM",
-    ages: "All Ages",
-    address: "Venue address",
-    city: "City, ST",
-    maps: "https://maps.google.com/?q=",
-    benefit: "",
-    note: "",
-    presented: "",
-    host: "",
-    dj: "",
-    lineup: [],
-  },
-  ---- */
-];
+export const shows: Show[] = [];
 
-export const nextShow = shows[0];
+export const nextShow: Show | undefined = shows[0];
 
 export type ArtPiece = {
   id: string;
